@@ -363,6 +363,9 @@ var app = {
 			},
 			success: function (data) {
 				callback(data.data);
+			},
+			error: function(data) {
+				callback({data: []})
 			}
 		});
 	},
