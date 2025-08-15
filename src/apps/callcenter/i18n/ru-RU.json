@@ -57,6 +57,8 @@
 				"maxNumberCallsHelpText": "Сколько абонентов могут ждать в очереди в очереди (0 - без ограничений)",
 				"maxHoldTimeLabel": "Максимальное время удержания (в секундах)",
 				"maxHoldTimeHelpText": "В секундах, как долго пытаться подключить вызывающего абонента до того, как он перейдёт к следующим действиям очереди (0 - без ограничений).",
+				"positionAnnouncementsLabel": "Position Announcements",
+				"waitTimeAnnouncementsLabel": "Wait Time Announcements",
 				"enterWhenEmptyLabel": "Позволить вызывающему абоненту войти в эту очередь, когда агенты недоступны."
 
 			},

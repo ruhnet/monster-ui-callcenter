@@ -127,6 +127,32 @@
 						<div class="controls">
 							<div class="checkbox">
 								<label>
+									<input class="js-to-serialize" type="checkbox" name="announcements.position_announcements_enabled"
+										{{#if data.announcements.position_announcements_enabled }}checked="checked"{{/if}}>
+										{{ i18n.callcenter.settings.queuePanel.positionAnnouncementsLabel }}
+								</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="control-group">
+						<span class="control-label"></span>
+						<div class="controls">
+							<div class="checkbox">
+								<label>
+									<input class="js-to-serialize" type="checkbox" name="announcements.wait_time_announcements_enabled"
+										{{#if data.announcements.wait_time_announcements_enabled }}checked="checked"{{/if}}>
+										{{ i18n.callcenter.settings.queuePanel.waitTimeAnnouncementsLabel }}
+								</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="control-group">
+						<span class="control-label"></span>
+						<div class="controls">
+							<div class="checkbox">
+								<label>
 									<input class="js-to-serialize" type="checkbox" name="enter_when_empty"
 										{{#if data.enter_when_empty }}checked="checked"{{/if}}>
 										{{ i18n.callcenter.settings.queuePanel.enterWhenEmptyLabel }}

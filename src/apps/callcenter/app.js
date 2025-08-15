@@ -1214,15 +1214,39 @@ var app = {
 		$parent.find(selector).each(function(i, el){
 			var $el = $(el);
 			var name = $el.attr('name');
+			var nameArr = name.split("."); //for subobjects, like 'announcements'
+			var subObject = {};
+			if (nameArr.length > 1) {
+				subKey = nameArr[0];
+				name = nameArr[1];
+			}
 
 			if(el.tagName === 'INPUT') {
 				if($el.attr('type') === 'checkbox') {
-					result[name] = !!$el.is(':checked');
+					checkboxValue = !!$el.is(':checked');
+					if (nameArr.length > 1) {
+						if (result[subKey]) {
+							subObject = result[subKey];
+						}
+						subObject[name] = checkboxValue;
+						result[subKey] = subObject;
+					} else {
+						result[name] = checkboxValue;
+					}
 					return;
 				}
 
 				if(!!$el.val()) {
-					result[name] = $el.val();
+					var itemValue = $el.val();
+					if (nameArr.length > 1) {
+						if (result[subKey]) {
+							subObject = result[subKey];
+						}
+						subObject[name] = itemValue;
+						result[subKey] = subObject;
+					} else {
+						result[name] = itemValue;
+					}
 					return;
 				}
 			}

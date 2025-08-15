@@ -60,6 +60,8 @@
 				"maxNumberCallsHelpText": "How many callers are allowed to wait on hold in the queue (0 for no limit).",
 				"maxHoldTimeLabel": "Max Hold Time (s)",
 				"maxHoldTimeHelpText": "In seconds, how long to try to connect the caller before progressing past the queue callflow action (0 for no limit).",
+				"positionAnnouncementsLabel": "Position Announcements",
+				"waitTimeAnnouncementsLabel": "Wait Time Announcements",
 				"enterWhenEmptyLabel": "Allows a caller to enter this queue when no agents are available."
 			},
 			"notificationsPanel": {
